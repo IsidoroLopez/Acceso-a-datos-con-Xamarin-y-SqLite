@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AccesoDatos.ViewModels"
+             x:Class="AccesoDatos.Views.InsertarSeccionView">
+    <ContentPage.BindingContext>
+        <viewmodels:SeccionesViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" Orientation="Horizontal">
+                <Label Text="Número" VerticalOptions="Center"/>
+                <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding SeccionesModel.Seccion}"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal">
+                <Label Text="Nombre" VerticalOptions="Center"/>
+                <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding SeccionesModel.Situacion}"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Orientation="Horizontal">
+                <Label Text="Localidad" VerticalOptions="Center"/>
+                <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding SeccionesModel.Direccion}"/>
+            </StackLayout>
+            <StackLayout Grid.Row="3" Orientation="Vertical">
+                <Button Text="Insertar sección" HorizontalOptions="Center"
+                                                        Command="{Binding InsertarDato}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

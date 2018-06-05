@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccesoDatos.Views.PrincipalView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Crear BBDD" x:Name="botoncrear"
+                    HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Leer Registros" x:Name="botonleer"
+                    HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Insertar Registro" x:Name="botoninsertar"
+                    HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="txtnumero" HorizontalOptions="FillAndExpand"
+                       Placeholder="Numero"/>
+            <Button Text="Modificar Registro" x:Name="botonmodificar"
+                    HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Eliminar Registro" x:Name="botoneliminar"
+                    HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="lblmensaje" FontSize="Large"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
